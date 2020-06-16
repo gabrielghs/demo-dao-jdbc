@@ -9,11 +9,13 @@ public class Program {
 	public static void main(String[] args) {
 		
 		
-		SellerDao sellerDao = DaoFactory.createSellerDao();
+		SellerDao o = DaoFactory.createSellerDao();
 		
-		Seller seller = sellerDao.findById(3);
+		System.out.println("=== TEST 1: sellerFindById ===");
+		Seller s = o.findById(3);
+		System.out.println(s);
 		
-		System.out.println(seller);
+		
 
 	}
 
